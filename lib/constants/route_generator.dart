@@ -6,7 +6,7 @@ import 'package:the_wash_tub_rider/screens/forgot_password_screen.dart';
 import 'package:the_wash_tub_rider/screens/login_screen.dart';
 import 'package:the_wash_tub_rider/screens/notification_screen.dart';
 import 'package:the_wash_tub_rider/screens/onboarding_screen.dart';
-import 'package:the_wash_tub_rider/screens/order_detail_screen.dart';
+
 import 'package:the_wash_tub_rider/screens/otp_screen.dart';
 import 'package:the_wash_tub_rider/screens/reset_password_screen.dart';
 import 'package:the_wash_tub_rider/screens/splash_screen.dart';
@@ -67,11 +67,6 @@ class RouteGenerator {
         return MaterialPageRoute(
           settings: RouteSettings(name: bottomNavBarScreen),
           builder: (_) => const BottomNavBarScreen(),
-        );
-      case orderDetailScreen:
-        return MaterialPageRoute(
-          settings: RouteSettings(name: orderDetailScreen),
-          builder: (_) => const OrderDetailScreen(),
         );
       case changePasswordScreen:
         return MaterialPageRoute(

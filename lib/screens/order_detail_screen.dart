@@ -1,11 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:the_wash_tub_rider/constants/assets.dart';
-import 'package:the_wash_tub_rider/widget/order_timeling_widget.dart';
-
-import '../utils/color_constant.dart';
-import '../widget/border_container_widget.dart';
+import 'package:the_wash_tub_rider/utils/color_constant.dart';
+import 'package:the_wash_tub_rider/widget/todays_order_title.dart';
 
 class OrderDetailScreen extends StatelessWidget {
   const OrderDetailScreen({super.key});
@@ -13,148 +12,211 @@ class OrderDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Order Details")),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.asset(DummyAssets.orderDetail),
-            SizedBox(height: 24.h),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.w),
-              child: Text(
-                "Order Timeline",
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-            ),
-            SizedBox(height: 18.h),
-            OrderTimelingWidget(),
-            SizedBox(height: 30.h),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.w),
-              child: Text(
-                "Rider",
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-            ),
-            SizedBox(height: 18.h),
-            BorderContainerWidget(
-              margin: EdgeInsets.symmetric(horizontal: 24.w),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ClipOval(
-                    child: Image.asset(
-                      DummyAssets.person,
-                      height: 42.h,
-                      width: 42.h,
+      body: Stack(
+        children: [
+          Image.asset(PngAssets.homeVector),
+
+          Column(
+            children: [
+              SizedBox(height: 159.h),
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 26.h,
+                    horizontal: 24.w,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(15.r),
+                      topRight: Radius.circular(15.r),
                     ),
                   ),
-                  SizedBox(width: 6.w),
-                  Column(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      SizedBox(height: 40.h),
+                      buildProfile(context: context),
+                      SizedBox(height: 30.h),
+                      buildProfileInfo(context: context),
+                      SizedBox(height: 30.h),
                       Text(
-                        "Charlie Donin",
-                        style: Theme.of(
-                          context,
-                        ).textTheme.headlineMedium!.copyWith(fontSize: 14.sp),
-                      ),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.star_rate_rounded,
-                            color: Color(0xffF0B100),
-                          ),
-                          Text(
-                            "4.4 Ratings",
-                            style: Theme.of(context).textTheme.bodySmall,
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                  BorderContainerWidget(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                    child: Icon(
-                      Icons.messenger_outline,
-                      color: Color(0XFF761C5C),
-                    ),
-                  ),
-                  SizedBox(width: 6.w),
-                  BorderContainerWidget(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                    child: Icon(Icons.call_outlined, color: Color(0XFF761C5C)),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 30.h),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.w),
-              child: Text(
-                "Payment Summary",
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-            ),
-            SizedBox(height: 18.h),
-            BorderContainerWidget(
-              padding: EdgeInsets.all(16.w),
-              margin: EdgeInsets.symmetric(horizontal: 24.w),
-              // color: AppColors.white,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Current Points",
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
-                      Text("120", style: Theme.of(context).textTheme.bodyLarge),
-                    ],
-                  ),
-                  SizedBox(height: 22.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Points to Redeem",
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
-                      Text(
-                        "-100",
-                        style: Theme.of(
-                          context,
-                        ).textTheme.bodyLarge!.copyWith(color: Colors.red),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 22.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Current Points",
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
-                      Text(
-                        "20",
+                        "Comments by Customer",
                         style: Theme.of(context).textTheme.headlineMedium,
                       ),
+                      SizedBox(height: 16.h),
+                      Text(
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis volutpat penatibus nullam elementum pulvinar lectus cras tempus iaculis. Ut nascetur elementum orci dictumst tempus tristique viverra aliquam dui. Semper eget lobortis pharetra facilisis cursus porttitor. Non, neque eget facilisis interdum molestie est.",
+                        style: Theme.of(context).textTheme.displayMedium,
+                      ),
                     ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Positioned(
+            top: 121.h,
+            left: 24.w,
+            child: ClipOval(
+              child: Image.asset(DummyAssets.person, height: 82.w, width: 82.w),
+            ),
+          ),
+          Positioned(
+            top: 64.h,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.w),
+              child: Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(6.r),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      Iconsax.arrow_left,
+                      size: 24.sp,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(width: 51.w),
+                  Text(
+                    "New Order Details",
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                      fontSize: 20.sp,
+                      color: Colors.white,
+                    ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 80.h),
+          ),
+        ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsetsGeometry.all(24.w),
+        child: ElevatedButton(onPressed: () {}, child: Text("Scan Order")),
+      ),
+    );
+  }
+
+  Row buildProfile({required BuildContext context}) {
+    return Row(
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Christopher Smith",
+              style: Theme.of(
+                context,
+              ).textTheme.headlineMedium!.copyWith(fontSize: 19.sp),
+            ),
+            SizedBox(height: 8.h),
+            Row(
+              children: [
+                Icon(Iconsax.call, size: 16.sp, color: AppColors.textGreyColor),
+                SizedBox(width: 6.w),
+                Text(
+                  "+1 (555) 123-4567",
+                  style: Theme.of(context).textTheme.displayMedium,
+                ),
+              ],
+            ),
           ],
         ),
-      ),
+        Spacer(),
+        Row(
+          children: [
+            Container(
+              padding: EdgeInsets.all(9.r),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6.r),
+                border: Border.all(color: AppColors.lightGrey, width: 1.w),
+              ),
+              child: Icon(
+                Iconsax.message_text,
+                size: 20.sp,
+                color: AppColors.darkPurpleColor,
+              ),
+            ),
+            SizedBox(width: 14.w),
+            Container(
+              padding: EdgeInsets.all(9.r),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6.r),
+                border: Border.all(color: AppColors.lightGrey, width: 1.w),
+              ),
+              child: Icon(
+                Iconsax.call,
+                size: 20.sp,
+                color: AppColors.darkPurpleColor,
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget buildProfileInfo({required BuildContext context}) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            SizedBox(
+              width: 111.w,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Postal Code",
+                    style: Theme.of(context).textTheme.displayMedium,
+                  ),
+                  SizedBox(height: 10.h),
+                  Text(
+                    "10001",
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(width: 30.w),
+            SizedBox(
+              width: 111.w,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Time",
+                    style: Theme.of(context).textTheme.displayMedium,
+                  ),
+                  SizedBox(height: 10.h),
+                  Text(
+                    "09:00 - 10:00",
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        SizedBox(height: 20.h),
+        Text("Location", style: Theme.of(context).textTheme.displayMedium),
+        SizedBox(height: 10.h),
+        Text(
+          "2487 Maplewood Drive, Austin, TX 78704, United States",
+          style: Theme.of(
+            context,
+          ).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
+        ),
+      ],
     );
   }
 }

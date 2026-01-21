@@ -17,4 +17,5 @@ class AppColors {
   static const Color darkPurpleColor = Color(0xFF761C5C);
   static const Color progressBarForegroundColor = Color(0xff15803D);
   static const Color progressBarBackgroundColor = Color(0xFFEBECED);
+  static const Color lightGrey = Color(0xFFE5E7EB);
 }

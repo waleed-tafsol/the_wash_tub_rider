@@ -21,6 +21,7 @@ class AppTheme {
         titleTextStyle: TextStyle(
           color: AppColors.blackColor,
           fontSize: 20.sp,
+          height: 0,
           fontWeight: FontWeight.w600,
         ),
 
@@ -29,18 +30,21 @@ class AppTheme {
       ),
       textTheme: TextTheme(
         headlineLarge: TextStyle(
+          height: 0,
           fontSize: 25.sp,
           color: AppColors.blackColor,
           fontWeight: FontWeight.w600,
         ),
         headlineMedium: TextStyle(
           fontSize: 16.sp,
+          height: 0,
           color: AppColors.blackColor,
           fontWeight: FontWeight.w600,
         ),
         headlineSmall: TextStyle(
           color: AppColors.blackColor,
           fontSize: 14.sp,
+          height: 0,
           fontWeight: FontWeight.w500,
         ),
         displayLarge: TextStyle(
@@ -49,20 +53,37 @@ class AppTheme {
 
           fontWeight: FontWeight.w400,
         ),
+        displayMedium: TextStyle(
+          fontSize: 14.sp,
+          height: 0,
+          color: AppColors.textGreyColor,
+
+          fontWeight: FontWeight.w400,
+        ),
+        displaySmall: TextStyle(
+          fontSize: 12.sp,
+          height: 0,
+          color: AppColors.textGreyColor,
+
+          fontWeight: FontWeight.w400,
+        ),
 
         bodyLarge: TextStyle(
           fontSize: 15.sp,
+          height: 0,
           color: AppColors.blackColor,
 
           fontWeight: FontWeight.w400,
         ),
         bodyMedium: TextStyle(
           fontSize: 14.sp,
+          height: 0,
           color: AppColors.blackColor,
           fontWeight: FontWeight.w400,
         ),
         bodySmall: TextStyle(
           fontSize: 13.sp,
+          height: 0,
           color: AppColors.blackColor,
           fontWeight: FontWeight.w400,
         ),

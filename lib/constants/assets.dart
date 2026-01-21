@@ -16,6 +16,7 @@ class PngAssets {
   static const String stripe = '${_assets}stripe.png';
   static const String message = '${_assets}message.png';
   static const String whatsapp = '${_assets}whatsapp.png';
+  static const String homeVector = '${_assets}home_vector.png';
 }
 
 class DummyAssets {
