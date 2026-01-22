@@ -67,22 +67,14 @@ class ProfileScreen extends StatelessWidget {
               title: "Contact Us",
               icon: Icons.info_outline,
               onTap: () {
-                Navigator.pushNamed(
-                  context,
-                  termsAndConditionScreen,
-                  arguments: "Contact Us",
-                );
+                Navigator.pushNamed(context, contactUsScreen);
               },
             ),
             ProfileOptionsTile(
               title: "FAQ’s",
               icon: Icons.question_mark_outlined,
               onTap: () {
-                Navigator.pushNamed(
-                  context,
-                  termsAndConditionScreen,
-                  arguments: "FAQ’s",
-                );
+                Navigator.pushNamed(context, faqScreen);
               },
             ),
             ProfileOptionsTile(

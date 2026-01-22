@@ -49,6 +49,18 @@ class Validators {
     return null;
   }
 
+  static String? confirmPassword(String? value,String? password) {
+    if (value == null || value.trim().isEmpty) {
+      return 'Confirm Password is required';
+    }
+
+    if (value != password) {
+      return 'Passwords do not match';
+    }
+
+    return null;
+  }
+
   /// Phone number validator
   /// Accepts numbers with optional country code
   static String? phone(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:the_wash_tub_rider/screens/bottom_nav_page.dart';
 import 'package:the_wash_tub_rider/screens/change_password_screen.dart';
+import 'package:the_wash_tub_rider/screens/contact_us_screen.dart';
 import 'package:the_wash_tub_rider/screens/edit_profile_screen.dart';
+import 'package:the_wash_tub_rider/screens/faq_screen.dart';
 import 'package:the_wash_tub_rider/screens/forgot_password_screen.dart';
 import 'package:the_wash_tub_rider/screens/login_screen.dart';
 import 'package:the_wash_tub_rider/screens/notification_screen.dart';
@@ -33,6 +35,8 @@ const String scannerScreen = '/scanner_screen';
 const String notificationScreen = '/notification_screen';
 const String signUpScreen = '/sign_up_screen';
 const String termsAndConditionScreen = '/terms_and_condition_screen';
+const String faqScreen = '/faq_screen';
+const String contactUsScreen = '/contact_us_screen';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -117,7 +121,17 @@ class RouteGenerator {
       case termsAndConditionScreen:
         return MaterialPageRoute(
           settings: RouteSettings(name: termsAndConditionScreen),
-          builder: (_) => TermsAndConditionsScreen(title: args as String),
+          builder: (_) => TermsAndConditionsScreen(),
+        );
+        case faqScreen:
+        return MaterialPageRoute(
+          settings: RouteSettings(name: faqScreen),
+          builder: (_) => const FaqsScreen(),
+        );
+        case contactUsScreen:
+        return MaterialPageRoute(
+          settings: RouteSettings(name: contactUsScreen),
+          builder: (_) => const ContactUs(),
         );
       default:
         return _errorRoute();

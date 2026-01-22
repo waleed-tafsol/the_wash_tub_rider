@@ -21,7 +21,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _fullNameController = TextEditingController();
 
   final TextEditingController _emailController = TextEditingController();
-
+  final TextEditingController _confirmPasswordController =
+      TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
 
@@ -30,7 +31,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 26.h, horizontal: 24.w),
+          padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 24.w),
           child: SingleChildScrollView(
             child: Form(
               key: _formKey,
@@ -50,21 +51,31 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   TextFormFieldWithTitleWidget(
                     title: 'Full Name',
                     validator: Validators.empty,
-                    controller: TextEditingController(),
+                    controller: _fullNameController,
                     hintText: "Enter Full Name",
                   ),
                   TextFormFieldWithTitleWidget(
                     title: 'Email Address',
                     validator: Validators.email,
-                    controller: TextEditingController(),
+                    controller: _emailController,
                     hintText: "Enter Email Address",
                   ),
                   TextFormFieldWithTitleWidget(
                     title: 'Password',
                     validator: Validators.password,
-                    controller: TextEditingController(),
+                    controller: _passwordController,
                     suffixIcon: Icons.visibility_outlined,
                     hintText: "Enter Password",
+                  ),
+                  TextFormFieldWithTitleWidget(
+                    title: 'Confirm Password',
+                    validator: (value) => Validators.confirmPassword(
+                      value,
+                      _passwordController.text,
+                    ),
+                    controller: _confirmPasswordController,
+                    suffixIcon: Icons.visibility_outlined,
+                    hintText: "Enter Confirm Password",
                   ),
                   PhoneWidget(
                     isEditable: false,
@@ -186,6 +197,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     _fullNameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
+    _confirmPasswordController.dispose();
     super.dispose();
   }
 }

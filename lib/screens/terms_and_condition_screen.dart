@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TermsAndConditionsScreen extends StatelessWidget {
-  final String title;
-  const TermsAndConditionsScreen({super.key , required this.title});
+  const TermsAndConditionsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      appBar: AppBar(title: Text("Terms & Conditions")),
       body: SafeArea(
         top: false,
         child: Padding(
