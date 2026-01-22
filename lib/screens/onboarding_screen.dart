@@ -101,7 +101,7 @@ class OnboardingScreen extends StatelessWidget {
               ),
               SizedBox(height: 40.h),
               Padding(
-                padding: EdgeInsetsGeometry.symmetric(horizontal: 24.w),
+                padding: EdgeInsets.only(top: 24.w, left: 24.w, right: 24.w,bottom: MediaQuery.of(context).padding.bottom + 24.0),
                 child: ValueListenableBuilder(
                   valueListenable: _currentPage,
                   builder: (context, value, _) {

@@ -61,14 +61,19 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                 ),
               ),
               SizedBox(height: 19.h),
-              Expanded(
-                child: ListView.separated(
-                  separatorBuilder: (context, index) =>
-                      SizedBox(height: 20.h),
-                  itemCount: 7,
-                  itemBuilder: (context, index) {
-                    return OrderTile();
-                  },
+              Padding(
+                padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).padding.bottom,
+                ),
+                child: Expanded(
+                  child: ListView.separated(
+                    separatorBuilder: (context, index) =>
+                        SizedBox(height: 20.h),
+                    itemCount: 7,
+                    itemBuilder: (context, index) {
+                      return OrderTile();
+                    },
+                  ),
                 ),
               ),
             ],

@@ -28,15 +28,7 @@ class ContactUs extends StatelessWidget {
             TextField(
               decoration: InputDecoration(hintText: "detroit.alex@sample.com"),
             ),
-            SizedBox(height: 10.h),
-            Text(
-              "Phone Number",
-              style: TextStyle(
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-                color: AppColors.textBlackColor,
-              ),
-            ),
+
             SizedBox(height: 10.h),
             PhoneWidget(controller: TextEditingController(), filled: true),
 
