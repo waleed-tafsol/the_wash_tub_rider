@@ -37,6 +37,7 @@ class EditProfileScreen extends StatelessWidget {
                       shape: BoxShape.circle,
                       color: AppColors.kPrimaryColor,
                       child: Icon(
+                        size: 21.sp,
                         Icons.camera_alt_outlined,
                         color: Colors.white,
                       ),

@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_wash_tub_rider/constants/route_generator.dart';
 import 'package:the_wash_tub_rider/widget/profile_options_tile.dart';
 
-
 import '../constants/assets.dart';
 import '../widget/app_dialog.dart';
 import '../widget/border_container_widget.dart';
@@ -67,22 +66,46 @@ class ProfileScreen extends StatelessWidget {
             ProfileOptionsTile(
               title: "Contact Us",
               icon: Icons.info_outline,
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  termsAndConditionScreen,
+                  arguments: "Contact Us",
+                );
+              },
             ),
             ProfileOptionsTile(
               title: "FAQ’s",
               icon: Icons.question_mark_outlined,
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  termsAndConditionScreen,
+                  arguments: "FAQ’s",
+                );
+              },
             ),
             ProfileOptionsTile(
               title: "Privacy Policy",
               icon: Icons.privacy_tip_outlined,
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  termsAndConditionScreen,
+                  arguments: "Privacy Policy",
+                );
+              },
             ),
             ProfileOptionsTile(
               title: "Terms & Condition",
               icon: Icons.balance,
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  termsAndConditionScreen,
+                  arguments: "Terms and Conditions",
+                );
+              },
             ),
             ProfileOptionsTile(
               title: "Logout",

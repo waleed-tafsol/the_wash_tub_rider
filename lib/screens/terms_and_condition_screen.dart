@@ -1,0 +1,132 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class TermsAndConditionsScreen extends StatelessWidget {
+  final String title;
+  const TermsAndConditionsScreen({super.key , required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(title)),
+      body: SafeArea(
+        top: false,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 24.h),
+                Text(
+                  'Information We Collect',
+                  style: TextStyle(
+                    fontSize: 19.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(height: 5.h),
+                Text(
+                  'A- Personal Information',
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 5.h),
+                Text(
+                  '. Lorem ipsum dolor sit amet consectetur. Porttitor in ornare convallis mauris proin in sapien non. Massa arcu mi faucibus id nunc urna in. Vestibulum augue enim tristique aliquet nec tellus gravida vitae. Vitae fusce eget adipiscing ullamcorper condimentum a mollis hendrerit. Ultrices pellentesque tristique pretium metus ultricies in semper amet. Quis vitae fermentum magna enim sed tempus. Tempor platea at nec vitae donec gravida aenean arcu. Senectus nulla a facilisis nunc cras lorem eget. Neque sollicitudin.',
+                  style: TextStyle(
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 10.h),
+                Text(
+                  'B- Payment Information',
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 10.h),
+                Text(
+                  '. Lorem ipsum dolor sit amet consectetur. Porttitor in ornare convallis mauris proin in sapien non. Massa arcu mi faucibus id nunc urna in. Vestibulum augue enim tristique aliquet nec tellus gravida vitae. Vitae fusce eget adipiscing ullamcorper condimentum a mollis hendrerit. Ultrices pellentesque tristique pretium metus ultricies in semper amet. Quis vitae fermentum magna enim sed tempus. Tempor platea at nec vitae donec gravida aenean arcu. Senectus nulla a facilisis nunc cras lorem eget. Neque sollicitudin.',
+                  style: TextStyle(
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 10.h),
+                Text(
+                  'C- Usage Data',
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 10.h),
+                Text(
+                  '. Lorem ipsum dolor sit amet consectetur. Porttitor in ornare convallis mauris proin in sapien non. Massa arcu mi faucibus id nunc urna in. Vestibulum augue enim tristique aliquet nec tellus gravida vitae. Vitae fusce eget adipiscing ullamcorper condimentum a mollis hendrerit. Ultrices pellentesque tristique pretium metus ultricies in semper amet. Quis vitae fermentum magna enim sed tempus. Tempor platea at nec vitae donec gravida aenean arcu. Senectus nulla a facilisis nunc cras lorem eget. Neque sollicitudin.',
+                  style: TextStyle(
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 10.h),
+                Text(
+                  'D- Personal Information',
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 5.h),
+                Text(
+                  '. Lorem ipsum dolor sit amet consectetur. Porttitor in ornare convallis mauris proin in sapien non. Massa arcu mi faucibus id nunc urna in. Vestibulum augue enim tristique aliquet nec tellus gravida vitae. Vitae fusce eget adipiscing ullamcorper condimentum a mollis hendrerit. Ultrices pellentesque tristique pretium metus ultricies in semper amet. Quis vitae fermentum magna enim sed tempus. Tempor platea at nec vitae donec gravida aenean arcu. Senectus nulla a facilisis nunc cras lorem eget. Neque sollicitudin.',
+                  style: TextStyle(
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 10.h),
+                Text(
+                  'E- Payment Information',
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 10.h),
+                Text(
+                  '. Lorem ipsum dolor sit amet consectetur. Porttitor in ornare convallis mauris proin in sapien non. Massa arcu mi faucibus id nunc urna in. Vestibulum augue enim tristique aliquet nec tellus gravida vitae. Vitae fusce eget adipiscing ullamcorper condimentum a mollis hendrerit. Ultrices pellentesque tristique pretium metus ultricies in semper amet. Quis vitae fermentum magna enim sed tempus. Tempor platea at nec vitae donec gravida aenean arcu. Senectus nulla a facilisis nunc cras lorem eget. Neque sollicitudin.',
+                  style: TextStyle(
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 10.h),
+                Text(
+                  'F- Usage Data',
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 10.h),
+                Text(
+                  '. Lorem ipsum dolor sit amet consectetur. Porttitor in ornare convallis mauris proin in sapien non. Massa arcu mi faucibus id nunc urna in. Vestibulum augue enim tristique aliquet nec tellus gravida vitae. Vitae fusce eget adipiscing ullamcorper condimentum a mollis hendrerit. Ultrices pellentesque tristique pretium metus ultricies in semper amet. Quis vitae fermentum magna enim sed tempus. Tempor platea at nec vitae donec gravida aenean arcu. Senectus nulla a facilisis nunc cras lorem eget. Neque sollicitudin.',
+                  style: TextStyle(
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(height: 24.h),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

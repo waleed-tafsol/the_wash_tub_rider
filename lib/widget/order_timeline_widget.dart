@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:the_wash_tub_rider/constants/assets.dart';
 
 import 'package:the_wash_tub_rider/utils/color_constant.dart';
 import 'package:the_wash_tub_rider/widget/border_container_widget.dart';
@@ -17,7 +19,11 @@ class OrderTimelineWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          OrderDetailTimelineWidget(),
+          OrderDetailTimelineWidget(
+            title: "Picked Up From Customer",
+            subtitle: "123 Main Street, Apt 4B",
+            svgIcon: SvgAssets.cube,
+          ),
           SizedBox(height: 10.h),
           Container(
             margin: EdgeInsets.only(left: 25.w),
@@ -26,7 +32,11 @@ class OrderTimelineWidget extends StatelessWidget {
             color: AppColors.kPrimaryColor,
           ),
           SizedBox(height: 10.h),
-          OrderDetailTimelineWidget(),
+          OrderDetailTimelineWidget(
+            title: "Delivered to Factory",
+            subtitle: "123 Main Street, Apt 4B",
+            svgIcon: SvgAssets.delivery,
+          ),
           SizedBox(height: 10.h),
           Container(
             margin: EdgeInsets.only(left: 25.w),
@@ -35,7 +45,23 @@ class OrderTimelineWidget extends StatelessWidget {
             color: AppColors.kPrimaryColor,
           ),
           SizedBox(height: 10.h),
-          OrderDetailTimelineWidget(),
+          OrderDetailTimelineWidget(
+            title: "Pickup From Factory",
+            subtitle: "123 Main Street, Apt 4B",
+            svgIcon: SvgAssets.delivery,
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 25.w),
+            height: 22.h,
+            width: 2.w,
+            color: AppColors.kPrimaryColor,
+          ),
+          SizedBox(height: 10.h),
+          OrderDetailTimelineWidget(
+            title: "Delivered to Factory",
+            subtitle: "123 Main Street, Apt 4B",
+            svgIcon: SvgAssets.cube,
+          ),
           // SizedBox(height: 10.h),
           // // Container(
           // //   margin: EdgeInsets.only(left: 25.w),

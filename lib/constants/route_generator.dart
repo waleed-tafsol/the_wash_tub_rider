@@ -15,6 +15,7 @@ import 'package:the_wash_tub_rider/screens/reset_password_screen.dart';
 import 'package:the_wash_tub_rider/screens/scanner_screen.dart';
 import 'package:the_wash_tub_rider/screens/sign_up_screen.dart';
 import 'package:the_wash_tub_rider/screens/splash_screen.dart';
+import 'package:the_wash_tub_rider/screens/terms_and_condition_screen.dart';
 
 const String splashScreen = '/';
 const String onboardingScreen = '/onboarding_Screen';
@@ -31,10 +32,11 @@ const String editProfileScreen = '/edit_profile_screen';
 const String scannerScreen = '/scanner_screen';
 const String notificationScreen = '/notification_screen';
 const String signUpScreen = '/sign_up_screen';
+const String termsAndConditionScreen = '/terms_and_condition_screen';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    final args = settings.arguments as Map<String, dynamic>?;
+    final args = settings.arguments;
 
     switch (settings.name) {
       case splashScreen:
@@ -82,7 +84,7 @@ class RouteGenerator {
           settings: RouteSettings(name: bottomNavBarScreen),
           builder: (_) => const BottomNavBarScreen(),
         );
-        case orderDetailScreen:
+      case orderDetailScreen:
         return MaterialPageRoute(
           settings: RouteSettings(name: orderDetailScreen),
           builder: (_) => const OrderDetailScreen(),
@@ -107,10 +109,15 @@ class RouteGenerator {
           settings: RouteSettings(name: notificationScreen),
           builder: (_) => const NotificationScreen(),
         );
-        case signUpScreen:
+      case signUpScreen:
         return MaterialPageRoute(
           settings: RouteSettings(name: signUpScreen),
-          builder: (_) =>  SignUpScreen(),
+          builder: (_) => SignUpScreen(),
+        );
+      case termsAndConditionScreen:
+        return MaterialPageRoute(
+          settings: RouteSettings(name: termsAndConditionScreen),
+          builder: (_) => TermsAndConditionsScreen(title: args as String),
         );
       default:
         return _errorRoute();

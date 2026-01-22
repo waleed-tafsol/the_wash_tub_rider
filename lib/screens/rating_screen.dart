@@ -116,7 +116,12 @@ class RatingScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.all(24.0.w),
+        padding: EdgeInsets.only(
+          left: 24.w,
+          right: 24.w,
+          bottom: MediaQuery.paddingOf(context).bottom + 24.h,
+          top: 24.h,
+        ),
         child: ElevatedButton(
           onPressed: () {
             Navigator.pushNamedAndRemoveUntil(

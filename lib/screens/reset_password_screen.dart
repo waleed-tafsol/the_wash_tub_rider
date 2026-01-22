@@ -36,11 +36,13 @@ class ResetPasswordScreen extends StatelessWidget {
                   title: 'New Password',
                   controller: TextEditingController(),
                   suffixIcon: Icons.visibility_outlined,
+                  hintText: "Enter New Password",
                 ),
                 TextFormFieldWithTitleWidget(
                   title: 'Confirm Password',
                   controller: TextEditingController(),
                   suffixIcon: Icons.visibility_outlined,
+                  hintText: "Enter Confirm Password",
                 ),
                 Spacer(),
                 ElevatedButton(

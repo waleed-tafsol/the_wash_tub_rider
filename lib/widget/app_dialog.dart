@@ -36,8 +36,7 @@ class AppDialog extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            if (titleIcon != null)
-              Align(alignment: Alignment.topRight, child: titleIcon!),
+            if (titleIcon != null) titleIcon!,
             if (titleIcon != null) SizedBox(height: 20.h),
             Text(
               title,

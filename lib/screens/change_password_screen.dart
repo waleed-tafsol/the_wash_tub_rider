@@ -18,23 +18,31 @@ class ChangePasswordScreen extends StatelessWidget {
               title: 'Current Password',
               suffixIcon: Icons.visibility_outlined,
               controller: TextEditingController(),
+              hintText: "Enter Current Password",
             ),
             TextFormFieldWithTitleWidget(
               title: 'New Password',
               controller: TextEditingController(),
               suffixIcon: Icons.visibility_outlined,
+              hintText: "Enter New Password",
             ),
             TextFormFieldWithTitleWidget(
               title: 'Confirm Password',
               controller: TextEditingController(),
               suffixIcon: Icons.visibility_outlined,
+              hintText: "Enter Confirm Password",
             ),
             Spacer(),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: const Text('Update Password'),
+            Padding(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.paddingOf(context).bottom,
+              ),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: const Text('Update Password'),
+              ),
             ),
           ],
         ),

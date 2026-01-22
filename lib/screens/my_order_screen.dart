@@ -22,10 +22,16 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("My Orders")),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 10.0),
+          child: const Text("My Orders"),
+        ),
+      ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.symmetric(horizontal: 24.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -57,7 +63,8 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
               SizedBox(height: 19.h),
               Expanded(
                 child: ListView.separated(
-                  separatorBuilder: (context, index) => SizedBox(height: 20.h),
+                  separatorBuilder: (context, index) =>
+                      SizedBox(height: 20.h),
                   itemCount: 7,
                   itemBuilder: (context, index) {
                     return OrderTile();

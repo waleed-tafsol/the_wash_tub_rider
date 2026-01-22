@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:provider/provider.dart';
-import 'package:the_wash_tub_rider/models/request/register_request_model.dart';
 import 'package:the_wash_tub_rider/utils/validator.dart';
-import 'package:the_wash_tub_rider/view_model/auth_view_model.dart';
-
 import '../constants/assets.dart';
 import '../constants/route_generator.dart';
 import '../utils/color_constant.dart';
@@ -55,17 +51,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     title: 'Full Name',
                     validator: Validators.empty,
                     controller: TextEditingController(),
+                    hintText: "Enter Full Name",
                   ),
                   TextFormFieldWithTitleWidget(
                     title: 'Email Address',
                     validator: Validators.email,
                     controller: TextEditingController(),
+                    hintText: "Enter Email Address",
                   ),
                   TextFormFieldWithTitleWidget(
                     title: 'Password',
                     validator: Validators.password,
                     controller: TextEditingController(),
                     suffixIcon: Icons.visibility_outlined,
+                    hintText: "Enter Password",
                   ),
                   PhoneWidget(
                     isEditable: false,

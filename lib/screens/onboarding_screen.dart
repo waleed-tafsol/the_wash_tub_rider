@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_wash_tub_rider/constants/assets.dart';
 import 'package:the_wash_tub_rider/constants/route_generator.dart';
 
-
 import '../utils/color_constant.dart';
 
 class _OnboardingModel {
@@ -24,19 +23,21 @@ class OnboardingScreen extends StatelessWidget {
 
   final List<_OnboardingModel> _onboardingList = [
     _OnboardingModel(
-      title: 'Track Your Rides',
+      title: 'Welcome to The Wash Tub',
       description:
-          'Easily track your trips and view ride history in one place.',
+          'Your ultimate laundry service solution, at your fingertips.',
       image: PngAssets.onboarding1,
     ),
     _OnboardingModel(
-      title: 'Earn on the Go',
-      description: 'Accept rides quickly and earn money with every trip.',
+      title: 'Scan and Deliver',
+      description:
+          'Quickly scan laundry bags to retrieve customer info and handle orders efficiently.',
       image: PngAssets.onboarding2,
     ),
     _OnboardingModel(
-      title: 'Fast & Secure',
-      description: 'Enjoy a fast, secure, and reliable experience every time.',
+      title: 'Stay on Track',
+      description:
+          'Optimize your route, stay updated with real-time alerts, and ensure timely deliveries.',
       image: PngAssets.onboarding3,
     ),
   ];

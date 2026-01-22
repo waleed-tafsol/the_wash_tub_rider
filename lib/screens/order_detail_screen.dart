@@ -99,7 +99,12 @@ class OrderDetailScreen extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsetsGeometry.all(24.w),
+        padding: EdgeInsets.only(
+          left: 24.w,
+          right: 24.w,
+          bottom: MediaQuery.paddingOf(context).bottom + 24.h,
+          top: 24.h,
+        ),
         child: ElevatedButton(
           onPressed: () {
             Navigator.pushNamed(context, scannerScreen);

@@ -6,7 +6,17 @@ import 'package:the_wash_tub_rider/utils/color_constant.dart';
 import 'package:the_wash_tub_rider/widget/border_container_widget.dart';
 
 class OrderDetailTimelineWidget extends StatelessWidget {
-  OrderDetailTimelineWidget({super.key});
+  final String title;
+  final String subtitle;
+  final String svgIcon;
+
+  OrderDetailTimelineWidget({
+    super.key,
+    required this.title,
+    required this.subtitle,
+    required this.svgIcon,
+  });
+
   final ValueNotifier<bool> _isChecked = ValueNotifier<bool>(false);
 
   @override
@@ -14,35 +24,41 @@ class OrderDetailTimelineWidget extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        BorderContainerWidget(
-          padding: EdgeInsets.all(13.w),
-          color: AppColors.kPrimaryColor,
-          child: SvgPicture.asset(
-            SvgAssets.cube,
-            color: Colors.white,
-            width: 24.w,
-            height: 24.w,
-          ),
+        // Wrap the BorderContainerWidget and SvgPicture with ValueListenableBuilder
+        ValueListenableBuilder<bool>(
+          valueListenable: _isChecked,
+          builder: (context, isChecked, child) {
+            return BorderContainerWidget(
+              padding: EdgeInsets.all(13.w),
+              color: isChecked
+                  ? AppColors.kPrimaryColor
+                  : AppColors.primaryLight,
+              child: SvgPicture.asset(
+                svgIcon,
+                color: isChecked ? Colors.white : AppColors.kPrimaryColor,
+                width: 24.w,
+                height: 24.w,
+              ),
+            );
+          },
         ),
         SizedBox(width: 16.w),
         Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Picked Up",
+              Text( 
+                title,
                 style: Theme.of(
                   context,
                 ).textTheme.headlineSmall!.copyWith(fontSize: 16.sp),
               ),
-              Text(
-                "Your laundry was collected",
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
+              Text(subtitle, style: Theme.of(context).textTheme.bodySmall),
             ],
           ),
         ),
         Spacer(),
+        // Wrap the Checkbox widget with ValueListenableBuilder
         ValueListenableBuilder<bool>(
           valueListenable: _isChecked,
           builder: (context, value, child) {

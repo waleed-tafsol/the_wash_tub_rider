@@ -55,12 +55,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       title: 'Email Address',
                       validator: Validators.email,
                       controller: _emailController,
+                      hintText: "Enter Email Address",
                     ),
                     TextFormFieldWithTitleWidget(
                       title: 'Password',
                       validator: Validators.password,
                       controller: _passwordController,
                       suffixIcon: Icons.visibility_outlined,
+                      hintText: "Enter Password",
                     ),
 
                     SizedBox(height: 20.h),
