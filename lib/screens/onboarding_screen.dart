@@ -19,6 +19,7 @@ class _OnboardingModel {
 
 class OnboardingScreen extends StatelessWidget {
   OnboardingScreen({super.key});
+
   final GlobalKey<FormState> personalFormKey = GlobalKey<FormState>();
 
   final List<_OnboardingModel> _onboardingList = [
@@ -65,7 +66,7 @@ class OnboardingScreen extends StatelessWidget {
                 _onboardingList[index].title,
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
-              SizedBox(height: 15.h),
+              Spacer(),
               Padding(
                 padding: EdgeInsetsGeometry.symmetric(horizontal: 24.w),
                 child: Text(
@@ -74,7 +75,7 @@ class OnboardingScreen extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ),
-              SizedBox(height: 24.h),
+              Spacer(),
               ValueListenableBuilder(
                 valueListenable: _currentPage,
                 builder: (context, value, _) {
@@ -99,9 +100,14 @@ class OnboardingScreen extends StatelessWidget {
                   );
                 },
               ),
-              SizedBox(height: 40.h),
+              Spacer(),
               Padding(
-                padding: EdgeInsets.only(top: 24.w, left: 24.w, right: 24.w,bottom: MediaQuery.of(context).padding.bottom + 24.0),
+                padding: EdgeInsets.only(
+                 // top: 24.w,
+                  left: 24.w,
+                  right: 24.w,
+                  bottom: MediaQuery.paddingOf(context).bottom + 24.0,
+                ),
                 child: ValueListenableBuilder(
                   valueListenable: _currentPage,
                   builder: (context, value, _) {
