@@ -101,6 +101,16 @@ enum BaseUrls {
   const BaseUrls(this.url);
 }
 
+enum OrderStatus {
+  allOrder("All Orders"),
+  pending("Pending"),
+  completed("Completed");
+
+  final String text;
+
+  const OrderStatus(this.text);
+}
+
 enum Screens {
   addMoney("Add Money"),
   myAccount("My Account"),

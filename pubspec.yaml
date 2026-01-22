@@ -45,6 +45,7 @@ dependencies:
   connectivity_plus: ^7.0.0
   http: ^1.6.0
   iconsax: ^0.0.8
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:

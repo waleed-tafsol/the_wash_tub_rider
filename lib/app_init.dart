@@ -25,9 +25,9 @@ class AppInit extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Wash Tub Rider',
-          // initialRoute: splashScreen,
-          // onGenerateRoute: RouteGenerator.generateRoute,
-          home: OrderDetailScreen(),
+          initialRoute: splashScreen,
+          onGenerateRoute: RouteGenerator.generateRoute,
+          // home: OrderDetailScreen(),
           // themeMode: themeMode,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.lightTheme,

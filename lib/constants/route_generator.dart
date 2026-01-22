@@ -6,25 +6,31 @@ import 'package:the_wash_tub_rider/screens/forgot_password_screen.dart';
 import 'package:the_wash_tub_rider/screens/login_screen.dart';
 import 'package:the_wash_tub_rider/screens/notification_screen.dart';
 import 'package:the_wash_tub_rider/screens/onboarding_screen.dart';
+import 'package:the_wash_tub_rider/screens/order_detail_screen.dart';
+import 'package:the_wash_tub_rider/screens/order_timeline_screen.dart';
 
 import 'package:the_wash_tub_rider/screens/otp_screen.dart';
+import 'package:the_wash_tub_rider/screens/rating_screen.dart';
 import 'package:the_wash_tub_rider/screens/reset_password_screen.dart';
+import 'package:the_wash_tub_rider/screens/scanner_screen.dart';
+import 'package:the_wash_tub_rider/screens/sign_up_screen.dart';
 import 'package:the_wash_tub_rider/screens/splash_screen.dart';
 
 const String splashScreen = '/';
 const String onboardingScreen = '/onboarding_Screen';
 const String loginScreen = '/login_Screen';
-
+const String ratingScreen = '/rating_screen';
 const String forgotPasswordScreen = '/forgot_password_screen';
 const String otpScreen = '/otp_screen';
 const String resetPasswordScreen = '/reset_password_screen';
-
+const String orderTimelineScreen = '/order_timeline_screen';
 const String bottomNavBarScreen = '/bottom_nav_page';
 const String orderDetailScreen = '/order_detail_screen';
 const String changePasswordScreen = '/change_password_screen';
 const String editProfileScreen = '/edit_profile_screen';
-
+const String scannerScreen = '/scanner_screen';
 const String notificationScreen = '/notification_screen';
+const String signUpScreen = '/sign_up_screen';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -46,7 +52,11 @@ class RouteGenerator {
           settings: RouteSettings(name: loginScreen),
           builder: (_) => LoginScreen(),
         );
-
+      case scannerScreen:
+        return MaterialPageRoute(
+          settings: RouteSettings(name: scannerScreen),
+          builder: (_) => const ScannerScreen(),
+        );
       case forgotPasswordScreen:
         return MaterialPageRoute(
           settings: RouteSettings(name: forgotPasswordScreen),
@@ -62,11 +72,20 @@ class RouteGenerator {
           settings: RouteSettings(name: resetPasswordScreen),
           builder: (_) => const ResetPasswordScreen(),
         );
-
+      case orderTimelineScreen:
+        return MaterialPageRoute(
+          settings: RouteSettings(name: orderTimelineScreen),
+          builder: (_) => const OrderTimelineScreen(),
+        );
       case bottomNavBarScreen:
         return MaterialPageRoute(
           settings: RouteSettings(name: bottomNavBarScreen),
           builder: (_) => const BottomNavBarScreen(),
+        );
+        case orderDetailScreen:
+        return MaterialPageRoute(
+          settings: RouteSettings(name: orderDetailScreen),
+          builder: (_) => const OrderDetailScreen(),
         );
       case changePasswordScreen:
         return MaterialPageRoute(
@@ -78,11 +97,20 @@ class RouteGenerator {
           settings: RouteSettings(name: editProfileScreen),
           builder: (_) => const EditProfileScreen(),
         );
-
+      case ratingScreen:
+        return MaterialPageRoute(
+          settings: RouteSettings(name: ratingScreen),
+          builder: (_) => const RatingScreen(),
+        );
       case notificationScreen:
         return MaterialPageRoute(
           settings: RouteSettings(name: notificationScreen),
           builder: (_) => const NotificationScreen(),
+        );
+        case signUpScreen:
+        return MaterialPageRoute(
+          settings: RouteSettings(name: signUpScreen),
+          builder: (_) =>  SignUpScreen(),
         );
       default:
         return _errorRoute();

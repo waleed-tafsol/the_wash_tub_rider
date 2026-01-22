@@ -25,6 +25,7 @@ class DummyAssets {
   static const String map = '${_assets}map.png';
   static const String qrCode = '${_assets}qr_code.png';
   static const String orderDetail = '${_assets}order_detail_map.png';
+  static const String scanner = '${_assets}scanner.png';
 }
 
 class gifAssets {
@@ -59,6 +60,10 @@ class SvgAssets {
   static const String cash = '${_assets}cash.svg';
   static const String wind = '${_assets}wind.svg';
   static const String drop = '${_assets}drop.svg';
+  static const String notification = '${_assets}notification_unfilled.svg';
+  static const String notificationFilled = '${_assets}notification_filled.svg';
+  static const String myOrders = '${_assets}my_orders_unfilled.svg';
+  static const String myOrdersFilled = '${_assets}my_orders_filled.svg';
 }
 
 class lottieAssets {

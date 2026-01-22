@@ -5,8 +5,8 @@ import 'package:the_wash_tub_rider/utils/color_constant.dart';
 import 'package:the_wash_tub_rider/widget/border_container_widget.dart';
 import 'package:the_wash_tub_rider/widget/order_detail_timeline_widget.dart';
 
-class OrderTimelingWidget extends StatelessWidget {
-  const OrderTimelingWidget({super.key});
+class OrderTimelineWidget extends StatelessWidget {
+  const OrderTimelineWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -29,20 +29,16 @@ class BottomNavBar extends StatelessWidget {
       unselectedIcon: SvgAssets.home,
     ),
     BottomNavItem(
-      label: 'QR Bag',
-      selectedIcon: SvgAssets.qrScanFilled,
-      unselectedIcon: SvgAssets.qrScan,
+      label: 'My Orders',
+      selectedIcon: SvgAssets.myOrdersFilled,
+      unselectedIcon: SvgAssets.myOrders,
     ),
     BottomNavItem(
-      label: 'Book',
-      selectedIcon: SvgAssets.bookFilled,
-      unselectedIcon: SvgAssets.book,
+      label: 'Notifications',
+      selectedIcon: SvgAssets.notificationFilled,
+      unselectedIcon: SvgAssets.notification,
     ),
-    BottomNavItem(
-      label: 'reward',
-      selectedIcon: SvgAssets.rewardFilled,
-      unselectedIcon: SvgAssets.reward,
-    ),
+   
     BottomNavItem(
       label: 'Profile',
       selectedIcon: SvgAssets.profileFilled,

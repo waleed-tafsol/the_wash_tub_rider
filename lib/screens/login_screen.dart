@@ -160,8 +160,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(height: 200.h),
                     Center(
                       child: InkWell(
-                        onTap:
-                            () {}, // Navigator.pushNamed(context, signUpScreen),
+                        onTap: () {
+                          Navigator.pushNamed(context, signUpScreen);
+                        }, // Navigator.pushNamed(context, signUpScreen),
                         child: RichText(
                           text: TextSpan(
                             children: [

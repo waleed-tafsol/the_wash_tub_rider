@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_wash_tub_rider/widget/border_container_widget.dart';
 
-
 import '../constants/assets.dart';
 import '../utils/color_constant.dart';
 import '../widget/phone_widget.dart';
@@ -56,10 +55,7 @@ class EditProfileScreen extends StatelessWidget {
                 hintText: "detroit.alex@sample.com",
                 controller: TextEditingController(),
               ),
-              TextFormFieldWithTitleWidget(
-                title: 'Phone Number',
-                controller: TextEditingController(),
-              ),
+
               PhoneWidget(
                 isEditable: false,
                 controller: TextEditingController(),
@@ -67,9 +63,14 @@ class EditProfileScreen extends StatelessWidget {
               ),
 
               Spacer(),
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text('Update Changes'),
+              Padding(
+                padding: EdgeInsets.only(
+                  bottom: MediaQuery.paddingOf(context).bottom + 24.0.h,
+                ),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Update Changes'),
+                ),
               ),
             ],
           ),

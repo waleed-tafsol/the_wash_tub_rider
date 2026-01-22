@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:the_wash_tub_rider/constants/assets.dart';
+import 'package:the_wash_tub_rider/constants/route_generator.dart';
 import 'package:the_wash_tub_rider/utils/color_constant.dart';
-import 'package:the_wash_tub_rider/widget/todays_order_title.dart';
 
 class OrderDetailScreen extends StatelessWidget {
   const OrderDetailScreen({super.key});
@@ -68,16 +67,21 @@ class OrderDetailScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 24.w),
               child: Row(
                 children: [
-                  Container(
-                    padding: EdgeInsets.all(6.r),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Icon(
-                      Iconsax.arrow_left,
-                      size: 24.sp,
-                      color: Colors.black,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(6.r),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Iconsax.arrow_left,
+                        size: 24.sp,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                   SizedBox(width: 51.w),
@@ -96,7 +100,12 @@ class OrderDetailScreen extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: EdgeInsetsGeometry.all(24.w),
-        child: ElevatedButton(onPressed: () {}, child: Text("Scan Order")),
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, scannerScreen);
+          },
+          child: Text("Scan Order"),
+        ),
       ),
     );
   }
