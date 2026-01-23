@@ -1,5 +1,6 @@
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:the_wash_tub_rider/main.dart';
 
 import 'enums.dart';
 
@@ -20,7 +21,7 @@ class Responsive {
   }
 
   static DesignType get designType {
-    final window = WidgetsBinding.instance.window;
+    final window = View.of(navigatorKey.currentContext!);
     final size = window.physicalSize / window.devicePixelRatio;
     if (size.width >= 800) {
       return DesignType.tablet;

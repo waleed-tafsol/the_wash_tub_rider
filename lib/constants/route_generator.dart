@@ -10,7 +10,6 @@ import 'package:the_wash_tub_rider/screens/notification_screen.dart';
 import 'package:the_wash_tub_rider/screens/onboarding_screen.dart';
 import 'package:the_wash_tub_rider/screens/order_detail_screen.dart';
 import 'package:the_wash_tub_rider/screens/order_timeline_screen.dart';
-
 import 'package:the_wash_tub_rider/screens/otp_screen.dart';
 import 'package:the_wash_tub_rider/screens/rating_screen.dart';
 import 'package:the_wash_tub_rider/screens/reset_password_screen.dart';
@@ -40,7 +39,7 @@ const String contactUsScreen = '/contact_us_screen';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    final args = settings.arguments;
+    // final args = settings.arguments;
 
     switch (settings.name) {
       case splashScreen:
@@ -123,12 +122,12 @@ class RouteGenerator {
           settings: RouteSettings(name: termsAndConditionScreen),
           builder: (_) => TermsAndConditionsScreen(),
         );
-        case faqScreen:
+      case faqScreen:
         return MaterialPageRoute(
           settings: RouteSettings(name: faqScreen),
           builder: (_) => const FaqsScreen(),
         );
-        case contactUsScreen:
+      case contactUsScreen:
         return MaterialPageRoute(
           settings: RouteSettings(name: contactUsScreen),
           builder: (_) => const ContactUs(),

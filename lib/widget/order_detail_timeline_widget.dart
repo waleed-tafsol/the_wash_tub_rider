@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:the_wash_tub_rider/constants/assets.dart';
 import 'package:the_wash_tub_rider/utils/color_constant.dart';
 import 'package:the_wash_tub_rider/widget/border_container_widget.dart';
 
@@ -35,7 +34,10 @@ class OrderDetailTimelineWidget extends StatelessWidget {
                   : AppColors.primaryLight,
               child: SvgPicture.asset(
                 svgIcon,
-                color: isChecked ? Colors.white : AppColors.kPrimaryColor,
+                colorFilter: ColorFilter.mode(
+                  isChecked ? Colors.white : AppColors.kPrimaryColor,
+                  BlendMode.srcIn,
+                ),
                 width: 24.w,
                 height: 24.w,
               ),
@@ -47,7 +49,7 @@ class OrderDetailTimelineWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text( 
+              Text(
                 title,
                 style: Theme.of(
                   context,

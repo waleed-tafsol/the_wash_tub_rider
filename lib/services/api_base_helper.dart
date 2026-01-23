@@ -1,20 +1,21 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:http/http.dart' as http;
+
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:http/http.dart' as http;
 import 'package:the_wash_tub_rider/utils/enums.dart';
 
 import '../utils/exception.dart';
 import '../utils/secure_storage_services.dart';
 
 class ApiBaseHelper {
-  static BaseUrls baseUrl = BaseUrls.stagUrl;
+  static BaseUrl baseUrl = BaseUrl.stagUrl;
 
   final http.Client _client = http.Client();
   final Connectivity _connectivity = Connectivity();
   final SecureStorageService _storage = SecureStorageService();
 
-  // ---------------- SAFE REQUEST WRAPPER ----------------
+  // ---------------- SAFE REQUEST WRAPPER ---------------- //
 
   Future<T> _safeRequest<T>(Future<T> Function() request) async {
     await _checkInternet();
@@ -29,7 +30,7 @@ class ApiBaseHelper {
     }
   }
 
-  // ---------------- HTTP METHODS ----------------
+  // ---------------- HTTP METHODS ---------------- //
 
   Future<dynamic> get(EndPoints endpoint) {
     return _safeRequest(() async {
@@ -73,7 +74,7 @@ class ApiBaseHelper {
     });
   }
 
-  // ---------------- HELPERS ----------------
+  // ---------------- HELPERS ---------------- //
 
   Map<String, String> _headers() {
     return {

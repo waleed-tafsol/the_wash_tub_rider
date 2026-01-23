@@ -6,16 +6,16 @@ String formatISOToCustom(String isoTime) {
   DateTime dateTime = DateTime.parse(isoTime).toLocal();
 
   // Get day name
-  List<String> days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ];
-  String dayName = days[dateTime.weekday - 1];
+  // List<String> days = [
+  //   "Sunday",
+  //   "Monday",
+  //   "Tuesday",
+  //   "Wednesday",
+  //   "Thursday",
+  //   "Friday",
+  //   "Saturday",
+  // ];
+  // String dayName = days[dateTime.weekday - 1];
 
   // Get month name
   List<String> months = [
@@ -30,7 +30,7 @@ String formatISOToCustom(String isoTime) {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
   String monthName = months[dateTime.month - 1];
 
@@ -42,8 +42,8 @@ String formatISOToCustom(String isoTime) {
   int hour = dateTime.hour > 12
       ? dateTime.hour - 12
       : dateTime.hour == 0
-          ? 12
-          : dateTime.hour;
+      ? 12
+      : dateTime.hour;
   String minute = dateTime.minute.toString().padLeft(2, '0');
   String period = dateTime.hour >= 12 ? "PM" : "AM";
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_wash_tub_rider/utils/validator.dart';
+
 import '../constants/assets.dart';
 import '../constants/route_generator.dart';
 import '../utils/color_constant.dart';
@@ -9,7 +10,7 @@ import '../widget/phone_widget.dart';
 import '../widget/text_form_field_with_title_widget.dart';
 
 class SignUpScreen extends StatefulWidget {
-  SignUpScreen({super.key});
+  const SignUpScreen({super.key});
 
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();

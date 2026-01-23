@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:provider/provider.dart';
-
 import 'package:flutter_svg/svg.dart';
 import 'package:the_wash_tub_rider/constants/assets.dart';
-import 'package:the_wash_tub_rider/models/request/login_request_model.dart';
 import 'package:the_wash_tub_rider/utils/color_constant.dart';
 import 'package:the_wash_tub_rider/utils/validator.dart';
-import 'package:the_wash_tub_rider/view_model/auth_view_model.dart';
 import 'package:the_wash_tub_rider/widget/text_form_field_with_title_widget.dart';
 
 import '../constants/route_generator.dart';
-import '../widget/phone_widget.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({super.key});
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
