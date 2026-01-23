@@ -64,6 +64,7 @@ class SvgAssets {
   static const String notificationFilled = '${_assets}notification_filled.svg';
   static const String myOrders = '${_assets}my_orders_unfilled.svg';
   static const String myOrdersFilled = '${_assets}my_orders_filled.svg';
+  static const String frame = '${_assets}frame.svg';
 }
 
 class lottieAssets {
