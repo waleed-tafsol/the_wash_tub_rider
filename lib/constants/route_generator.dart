@@ -60,7 +60,7 @@ class RouteGenerator {
       case scannerScreen:
         return MaterialPageRoute(
           settings: RouteSettings(name: scannerScreen),
-          builder: (_) => const ScannerScreen(),
+          builder: (_) => ScannerScreen(),
         );
       case forgotPasswordScreen:
         return MaterialPageRoute(
